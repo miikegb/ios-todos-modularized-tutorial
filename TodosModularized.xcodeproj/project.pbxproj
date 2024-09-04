@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		45EAF41E2C8916860096203C /* Login in Frameworks */ = {isa = PBXBuildFile; productRef = 45EAF41D2C8916860096203C /* Login */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		45EAF3F42C87FE4C0096203C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -65,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45EAF41E2C8916860096203C /* Login in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +96,7 @@
 				45EAF3E32C87FE4A0096203C /* TodosModularized */,
 				45EAF3F62C87FE4C0096203C /* TodosModularizedTests */,
 				45EAF4002C87FE4C0096203C /* TodosModularizedUITests */,
+				45EAF4122C89159F0096203C /* Frameworks */,
 				45EAF3E22C87FE4A0096203C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,6 +109,13 @@
 				45EAF3FD2C87FE4C0096203C /* TodosModularizedUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		45EAF4122C89159F0096203C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +138,7 @@
 			);
 			name = TodosModularized;
 			packageProductDependencies = (
+				45EAF41D2C8916860096203C /* Login */,
 			);
 			productName = TodosModularized;
 			productReference = 45EAF3E12C87FE4A0096203C /* TodosModularized.app */;
@@ -571,6 +585,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		45EAF41D2C8916860096203C /* Login */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Login;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 45EAF3D92C87FE4A0096203C /* Project object */;
 }
