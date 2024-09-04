@@ -29,9 +29,22 @@
 		45EAF3FD2C87FE4C0096203C /* TodosModularizedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodosModularizedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		45EAF4112C87FFC20096203C /* Exceptions for "TodosModularized" folder in "TodosModularized" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				AppModules,
+			);
+			target = 45EAF3E02C87FE4A0096203C /* TodosModularized */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		45EAF3E32C87FE4A0096203C /* TodosModularized */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				45EAF4112C87FFC20096203C /* Exceptions for "TodosModularized" folder in "TodosModularized" target */,
+			);
 			path = TodosModularized;
 			sourceTree = "<group>";
 		};
