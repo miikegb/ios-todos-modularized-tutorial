@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		45EAF41E2C8916860096203C /* Login in Frameworks */ = {isa = PBXBuildFile; productRef = 45EAF41D2C8916860096203C /* Login */; };
+		45EAF4242C89F4030096203C /* Home in Frameworks */ = {isa = PBXBuildFile; productRef = 45EAF4232C89F4030096203C /* Home */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45EAF41E2C8916860096203C /* Login in Frameworks */,
+				45EAF4242C89F4030096203C /* Home in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +141,7 @@
 			name = TodosModularized;
 			packageProductDependencies = (
 				45EAF41D2C8916860096203C /* Login */,
+				45EAF4232C89F4030096203C /* Home */,
 			);
 			productName = TodosModularized;
 			productReference = 45EAF3E12C87FE4A0096203C /* TodosModularized.app */;
@@ -590,6 +593,10 @@
 		45EAF41D2C8916860096203C /* Login */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Login;
+		};
+		45EAF4232C89F4030096203C /* Home */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Home;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

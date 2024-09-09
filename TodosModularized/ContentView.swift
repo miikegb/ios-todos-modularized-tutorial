@@ -6,29 +6,39 @@
 //
 
 import SwiftUI
-import SwiftData
 import LoginFeature
+import HomeFeature
+
+enum Screen {
+    case login, home
+}
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
-
+    @State private var currentScreen = Screen.login
+    @State private var isLoading = false
+    
     var body: some View {
-        LoginView { username, password in
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
+        ZStack {
+            switch currentScreen {
+            case .login:
+                LoginView { @MainActor username, password in
+                    Task {
+                        isLoading = true
+                        try await Task.sleep(nanoseconds: 2_000_000_000)
+                        currentScreen = .home
+                        isLoading = false
+                    }
+                }
+            case .home:
+                HomeView()
+            }
+            if isLoading {
+                ProgressView {
+                    Text("Loading")
+                }
+                .tint(.white)
+                .foregroundStyle(.white)
+                .progressViewStyle(.circular)
             }
         }
     }
@@ -36,5 +46,4 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
 }
